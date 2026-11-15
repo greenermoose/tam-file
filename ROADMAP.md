@@ -18,7 +18,7 @@ then diverging to fit Tamlinux workflows.
 2. **Non-Blocking UI & Worker Pool:**
    - Adopt Yazi's core strength: directory reading, file operations, and
      preview generation run off the main `tam_tty` event loop via `poll()`,
-     pipes, and/or POSIX worker threads so navigation is always instant.
+     pipes, and/or POSIX worker threads so navigation is always fast.
 3. **Filesystem Safety via `tam_fs_tree`:**
    - Use `tam_fs_walk`, `tam_fs_clone_or_copy` (reflink/extent sharing where
      supported), `tam_fs_remove_tree` (never following symlinks or crossing
