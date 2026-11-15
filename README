@@ -1,0 +1,72 @@
+TAM-FILE -- TERMINAL FILE MANAGER
+
+tam-file is a terminal file manager written in C11, depending only on the
+standard C libraries (POSIX libc) and libtam
+(https://github.com/greenermoose/libtam).
+
+It begins as a ground-up C11 rewrite of Yazi
+(https://github.com/sxyazi/yazi) -- matching Yazi's fast, non-blocking
+three-pane Miller-column UX, async task model, and Vim-like ergonomics --
+before diverging to add Tamlinux-native features and omit unnecessary
+complexity.
+
+Status: Planning & initial repository setup (pre-v0.1.0). No C source files
+have been written yet; see ROADMAP.md for the phased design and
+implementation plan.
+
+
+DESIGN PHILOSOPHY
+
+- Pure C11 + libtam Only:
+  Links statically against libtam.a (tam_str, tam_fs, tam_fs_tree,
+  tam_path, tam_exec, tam_ini, tam_tty, tam_key, tam_uni). No Rust
+  toolchain, no Lua runtime, no ncurses, and no heavy crate graph.
+
+- Instant Cold Start & Sub-Megabyte RSS:
+  Designed for 0-2 ms startup and minimal resident memory on both modern
+  terminal emulators (foot) and bare Linux virtual consoles (TERM=linux).
+
+- Safe, Atomic, Non-Blocking File Operations:
+  Built on tam_fs_tree (tam_fs_clone_or_copy for extent sharing,
+  tam_fs_remove_tree, tam_fs_walk) and controlled child processes via
+  tam_exec so large copies, previews, and searches never freeze the UI.
+
+- Clone First, Then Diverge:
+  Phase 0-4 establish core parity with Yazi's daily-driver file manager
+  workflow; Phase 5+ diverge to tailor tam-file for Tamlinux (tight
+  tam-edit/tam-data/tam_portal integration and focused C-only extensibility).
+
+
+CORE FEATURES (PLANNED)
+
+- Three-pane Miller-column layout (parent / current / preview) with
+  configurable column ratios and multi-tab support.
+- Vim-like navigation (h/j/k/l, gg/G, Ctrl+u/Ctrl+d), visual/multi-select
+  mode, cross-directory yank/cut/paste, bulk rename via $EDITOR (tam-edit),
+  and trash/permanent delete.
+- Non-blocking background task scheduler with live progress indicator
+  (copy, move, delete, chmod, archive).
+- Scrollable text, directory, archive, and media previews (delegating
+  syntax/PDF/image rendering via tam_exec to external tools like chafa,
+  pdftotext, or file when present, with clean text fallback on TERM=linux).
+- Fast jump & search integration via tam_exec (fd, ripgrep, fzf, zoxide).
+- Shell-cwd-on-exit (--cwd-file) and file-chooser mode (--chooser-file).
+
+
+PLANNED CONFIGURATION & PATHS
+
+Configuration follows XDG conventions via tam_xdg_path:
+
+  $XDG_CONFIG_HOME/tamlinux/tam-file/tam-file.ini   UI, previewers, openers
+  $XDG_CONFIG_HOME/tamlinux/tam-file/keymap.ini     Modal keybindings
+  $XDG_CONFIG_HOME/tamlinux/tam-file/theme.ini      Colors and icons/ASCII
+
+
+BUILD PREREQUISITES (PLANNED)
+
+- C11 compiler (gcc or clang)
+- POSIX libc (glibc or musl) and GNU Make
+- libtam (libtam.a)
+
+See ROADMAP.md for the milestone breakdown from v0.1.0 to v1.0.0 and
+ideas/yazi.md for architectural notes from Yazi.
