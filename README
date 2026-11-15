@@ -22,7 +22,7 @@ DESIGN PHILOSOPHY
   tam_path, tam_exec, tam_ini, tam_tty, tam_key, tam_uni). No Rust
   toolchain, no Lua runtime, no ncurses, and no heavy crate graph.
 
-- Instant Cold Start & Sub-Megabyte RSS:
+- Fast Cold Start & Sub-Megabyte RSS:
   Designed for 0-2 ms startup and minimal resident memory on both modern
   terminal emulators (foot) and bare Linux virtual consoles (TERM=linux).
 
