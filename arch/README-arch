@@ -1,0 +1,12 @@
+ARCHITECTURE DIRECTORY (tam-file)
+
+This folder is for architecture notes. It documents the data structures
+and algorithms of the reference implementations tracked in ideas/ (as well
+as how tam-file plans to implement or adapt them under the Tamlinux
+philosophy: pure C11, minimal dependencies, libtam-only linkage, and
+first-class Linux virtual console support).
+
+Contents:
+
+- yazi.md : Data structures and algorithms observed in Yazi (/home/fred/Code/yazi)
+            and how tam-file plans to adapt them in C11/libtam.
