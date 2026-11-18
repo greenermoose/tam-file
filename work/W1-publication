@@ -1,0 +1,36 @@
+W1 PUBLICATION PREPARATION
+
+Date: 2026-11-15
+AI harness: Codex CLI 0.169.0
+AI model: gpt-6.1-sol
+Commits: c36fd7e
+
+
+GUIDANCE
+
+  Fred: "Push tam-data, tam-edit, tam-file, tam-mail, and tam-ring to
+  their public github repos."
+
+  Fred: "Remove paths before publishing"
+
+
+DONE
+
+  - Removed a workstation checkout path from the upstream ideas note,
+    retaining its public source URL.
+  - Rewrote only unpublished history; original authors and messages
+    were preserved, with Codex trailers added to commits whose
+    documentation changed.
+  - Verified the documentation diff and checked unpublished commits for
+    local paths.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Migrated from docs/ai/2026-11-15-publication.md to work/ when
+    bringing tam-file up to the tam-idol standard (W2).

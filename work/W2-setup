@@ -1,0 +1,45 @@
+W2 BRINGING THE REPOSITORY UP TO THE TAM-IDOL STANDARD
+
+Date: 2026-11-18
+AI harness: agy 1.5.11
+AI model: gemini-4-hydrogen-medium
+Commits: the commit that adds this record
+
+
+GUIDANCE
+
+  Fred: "Take the slice of work for tam-idol. I forgot that we should
+  make sure the tam-file repo has all the required folders, including
+  work."
+
+  Fred (on docs/ai/): "No, docs/ai needs to get moved to work."
+
+
+DONE
+
+  - work/ added: README-work, WHATNOW, W1-publication (migrated from
+    docs/ai/2026-11-15-publication.md), and this record.
+  - docs/ai/ removed after migrating its record to work/W1-publication.
+  - reviews/README-reviews added.
+  - arch/, bugs/, ideas/ and plans/ README files replaced with the
+    tam-idol text, keeping tam-file's own notes under IN THIS
+    REPOSITORY and removing the local checkout path from arch/README-arch.
+  - ideas/sources lists yazi; tools/pull-references added.
+  - VERSION 0.0.0, UPSTREAM.md and AI-BLAME.md added; AI_PROVENANCE.md
+    removed.
+  - COPYRIGHT named tam-data; it now names tam-file and has the full
+    GPL notice.
+  - README says it follows tam-idol 0.1.0 and has WHERE THINGS ARE and
+    LICENSE.
+  - tam-idol's tools/idol-check passes for tam-file.
+
+
+FAILED
+
+  - Nothing.
+
+
+HANDOFF
+
+  - Write plans/P1-foundation.md from ROADMAP Phase 0, then the 0.1.0
+    skeleton. Details in work/WHATNOW.

@@ -1,0 +1,44 @@
+WHATNOW
+
+What tam-file is doing now and what comes next. Read this first; revise
+it at the end of every session (work/README-work).
+
+Updated: 2026-11-18, with W2
+
+
+STATE
+
+  Version 0.0.0 on branch dev: planning only, no code. README and
+  ROADMAP.md describe a pure C11 terminal file manager on libtam,
+  inspired by Yazi; ideas/yazi.md and arch/yazi.md hold what was
+  learned from Yazi. The repository follows the tam-idol 0.1.0 standard
+  (W2).
+
+
+NEXT
+
+  1. Write plans/P1-foundation.md from ROADMAP.md's Phase 0 (0.1.0):
+     the Makefile with strict C11 flags and make test under ASan and
+     UBSan, the INI configuration loader (tam_ini, tam_xdg_path), and
+     the three-pane Miller-column compositor on tam_tty, tam_key and
+     tam_uni. Follow plans/README-plans for what a plan holds; list its
+     open points for Fred. Done when Fred has read it.
+  2. Then the 0.1.0 skeleton: Makefile, src/, tests/, with
+     tam-file --version printing VERSION. Bump VERSION in the first
+     code commit.
+  3. Before acting on Yazi ideas in code, run tools/pull-references to
+     clone Yazi and check the notes against its source.
+
+
+WAITING FOR FRED
+
+  - Nothing.
+
+
+WATCH OUT
+
+  - ROADMAP.md numbers its phases from 0 (Phase 0 is 0.1.0); plans
+    count from P1, so P1 is Phase 0.
+  - Every code change bumps VERSION in the same commit.
+  - Public repository: never include local home-directory paths,
+    session IDs or private repository references.

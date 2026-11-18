@@ -14,6 +14,9 @@ Status: Planning & initial repository setup (pre-v0.1.0). No C source files
 have been written yet; see ROADMAP.md for the phased design and
 implementation plan.
 
+Follows the tam-idol 0.1.0 standard
+(https://github.com/greenermoose/tam-idol).
+
 
 DESIGN PHILOSOPHY
 
@@ -70,3 +73,27 @@ BUILD PREREQUISITES (PLANNED)
 
 See ROADMAP.md for the milestone breakdown from v0.1.0 to v1.0.0 and
 ideas/yazi.md for architectural notes from Yazi.
+
+
+WHERE THINGS ARE
+
+  ideas/           ideas from other file managers (yazi first)
+  arch/            architecture: data structures, algorithms,
+                   evaluations
+  plans/           one plan per work phase (P1, P2, ...)
+  bugs/            one record per bug (B1, B2, ...)
+  reviews/         one record per review (R1, R2, ...)
+  work/            WHATNOW (read it first: what is next) and one record
+                   per work session (W1, W2, ...)
+  tools/           helper scripts for developing tam-file
+  ROADMAP.md       milestones with their version numbers
+  UPSTREAM.md      every piece of code we took from another project
+  AI-BLAME.md      how AI work is recorded here
+  COPYRIGHT        copyright and license notices
+  LICENSE          GNU General Public License, version 3
+
+
+LICENSE
+
+  tam-file is free software under the GNU General Public License,
+  version 3 or later. See COPYRIGHT.
