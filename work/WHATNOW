@@ -11,7 +11,7 @@ STATE
   Version 0.0.0 on branch dev: planning only, no code. README and
   ROADMAP.md describe a pure C11 terminal file manager on libtam,
   inspired by Yazi; ideas/yazi.md and arch/yazi.md hold what was
-  learned from Yazi. The repository follows the tam-idol 0.1.0 standard
+  learned from Yazi. The repository follows the tam-idol 0.2.0 standard
   (W2).
 
 

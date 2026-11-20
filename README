@@ -14,7 +14,7 @@ Status: Planning & initial repository setup (pre-v0.1.0). No C source files
 have been written yet; see ROADMAP.md for the phased design and
 implementation plan.
 
-Follows the tam-idol 0.1.0 standard
+Follows the tam-idol 0.2.0 standard
 (https://github.com/greenermoose/tam-idol).
 
 
